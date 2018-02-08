@@ -10,7 +10,7 @@ class SessionForm extends Component{
       password: "",
     };
     this.setState = this.setState.bind(this);
-    console.log(this.props);
+    console.log('props',this.props);
   }
 
   componentWillMount () {
