@@ -14,8 +14,10 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="nav-bar">
         <Link className="login-button" to="/login">Log In
+        </Link>
+        <Link className="login-button" to="/signup">Sign Up
         </Link>
       </div>
     );
