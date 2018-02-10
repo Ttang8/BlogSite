@@ -13,6 +13,7 @@ class SessionForm extends Component{
     };
     console.log('props', this.props);
     this.setState = this.setState.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
 
     this.toggleModal = {toggle:true};
@@ -26,6 +27,17 @@ class SessionForm extends Component{
 
   update(field) {
     return event => this.setState({[field]: event.target.value});
+  }
+
+  handleSubmit() {
+    console.log(this);
+    event.preventDefault();
+    const user = this.state;
+    this.props.processForm({user});
+    this.state = {
+      username:"",
+      password:""
+    };
   }
 
   openModal() {
@@ -76,8 +88,18 @@ class SessionForm extends Component{
                 value={this.state.username}
                 onChange={this.update('username')}>
               </input>
-
             </div>
+            <div>
+              <input
+                placeholder="Password"
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}>
+              </input>
+            </div>
+            <input
+              type="submit"
+              value="Submit"></input>
           </form>
         </Modal>
       </div>
