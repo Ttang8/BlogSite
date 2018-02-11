@@ -72,6 +72,7 @@ class SessionForm extends Component{
           contentLabel="SessionFormModal"
           className="session-modal"
           ariaHideApp={false}
+          bodyOpenClassName="modal-open"
         >
           <div>
             {this.props.formType === 'login' ? 'Log In' : 'Create Account'}

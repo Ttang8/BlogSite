@@ -4,9 +4,9 @@
     left: 50%;
     min-width: 375px;
     min-height: 350px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 10px;
-    box-shadow: 1px 1px 7px gray;
+    box-shadow: 1px 1px 1px lightgray;
     background-color: white;
     transform: translate(-50%, -50%);
     display: flex;
@@ -16,4 +16,8 @@
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     z-index: 100;
+}
+
+.modal-open {
+  background-color: lightgray;
 }
